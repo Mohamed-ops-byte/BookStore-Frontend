@@ -1,0 +1,44 @@
+export const GET_ALL_BOOKS = "GET_ALL_BOOKS";
+export const GET_ONE_BOOK = "GET_ONE_BOOK";
+export const GET_BOOKS_BY_CATEGORY = "GET_BOOKS_BY_CATEGORY";
+
+export const CREATE_BOOK = "CREATE_BOOK";
+export const UPDATE_BOOK = "UPDATE_BOOK";
+export const DELETE_BOOK = "DELETE_BOOK";
+
+export const CREATE_NEW_USER = "CREATE_NEW_USER";
+export const FOREGT_PASSWORD = "FOREGT_PASSWORD";
+export const VERIFY_PASSWORD = "VERIFY_PASSWORD";
+export const RESET_PASSWORD = "RESET_PASSWORD";
+export const GET_CURERNT_USER = "GET_CURERNT_USER";
+export const LOGIN_USER = "LOGIN_USER";
+export const REGISTER_USER = "REGISTER_USER";
+
+// Cart Types
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const UPDATE_CART_QUANTITY = "UPDATE_CART_QUANTITY";
+export const CLEAR_CART = "CLEAR_CART";
+export const GET_CART_ITEMS = "GET_CART_ITEMS";
+
+// Modal Types
+export const OPEN_MODAL = "OPEN_MODAL";
+export const CLOSE_MODAL = "CLOSE_MODAL";
+export const OPEN_CART_MODAL = "OPEN_CART_MODAL";
+export const CLOSE_CART_MODAL = "CLOSE_CART_MODAL";
+
+export const GET_ERROR = "GET_ERROR";
+
+// Orders
+export const GET_ALL_ORDERS = "GET_ALL_ORDERS";
+export const CREATE_ORDER_ENTRY = "CREATE_ORDER_ENTRY";
+export const ORDERS_LOADING = "ORDERS_LOADING";
+export const ORDERS_ERROR = "ORDERS_ERROR";
+
+// Payment Types
+export const CREATE_PAYMENT_INTENT = "CREATE_PAYMENT_INTENT";
+export const PAYMENT_PROCESSING = "PAYMENT_PROCESSING";
+export const PAYMENT_SUCCESS = "PAYMENT_SUCCESS";
+export const PAYMENT_ERROR = "PAYMENT_ERROR";
+export const PAYMENT_LOADING = "PAYMENT_LOADING";
+export const CLEAR_PAYMENT_ERROR = "CLEAR_PAYMENT_ERROR";
