@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -25,6 +25,7 @@ const Home = () => {
   const navigate = useNavigate();
 
 const dispatch = useDispatch();
+const backendBaseUrl = 'https://bookstore-backend-20qr.onrender.com';
 
 const allbook = useSelector(state => state.allBooks?.book) || [];
 const { totalItems } = useSelector(state => state.cart);
@@ -39,6 +40,20 @@ useEffect(() => {
   
   fetchBooks();
 }, [dispatch]);
+
+useEffect(() => {
+  const fetchTest = async () => {
+    try {
+      const response = await fetch(`${backendBaseUrl}/test`);
+      const data = await response.json();
+      console.log('Backend /test response:', data);
+    } catch (error) {
+      console.log('Backend /test error:', error);
+    }
+  };
+
+  fetchTest();
+}, [backendBaseUrl]);
 
 const handleOpenAddModal = (book) => {
   setSelectedBook(book);

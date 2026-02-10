@@ -15,7 +15,6 @@ const Login = () => {
 
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
-const [loading, setLoading] = useState(false);
 const dispatch = useDispatch();
 
   const handleLogin =async (e) => {
@@ -25,8 +24,6 @@ const dispatch = useDispatch();
       return;
     }
 
-    setLoading(true)
-    
     console.log('handleLogin called with:', { email, password });
 
     const data = {
@@ -47,8 +44,6 @@ const dispatch = useDispatch();
     // تحقق من وجود بيانات حقيقية (ليس array فاضي أو object فاضي)
     if (res && typeof res === 'object' && !Array.isArray(res) && Object.keys(res).length > 0) {
       console.log('Processing response:', res);
-      setLoading(false);
-      
       const token = res.data?.token;
       const user = res.data?.user;
       

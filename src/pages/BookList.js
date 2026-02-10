@@ -14,14 +14,6 @@ import { getCartItems } from '../Redux/Actions/cartAction';
 import ShoppingCart from '../components/ShoppingCart';
 import AddToCartModal from '../components/AddToCartModal';
 
-import baseUrl from "../baseUrl";
-
-useEffect(() => {
-  baseUrl.get("/api/test")
-     .then(res => console.log(res.data))
-     .catch(err => console.error(err));
-}, []);
-
 
 
 const BookList = () => {
